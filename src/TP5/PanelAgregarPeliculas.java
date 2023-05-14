@@ -72,10 +72,11 @@ public class PanelAgregarPeliculas extends JPanel {
 					listModel.addElement(pelicula);
 							
 					txtNombre.setText("");
+					cbGenero.setSelectedIndex(0);
 					lblIDAuto.setText(Integer.toString(Peliculas.devuelveProximoID()));
 				}
 				else {
-					JOptionPane.showMessageDialog(null, "Por favor, complete todos los campos.");
+					JOptionPane.showMessageDialog(null, "No se puede agregar película. \nPor favor, complete todos los campos.");
 				}
 			}
 		});

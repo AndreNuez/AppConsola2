@@ -1,6 +1,6 @@
 package TP5;
 
-public class Peliculas {
+public class Peliculas implements Comparable<Peliculas> {
 
 	private int ID;
 	private String Nombre;
@@ -51,5 +51,12 @@ public class Peliculas {
 	public static int devuelveProximoID(){
 		return proximoID;
 	}
+
+	@Override
+	public int compareTo(Peliculas p) {
+		
+		return this.getNombre().compareTo(p.getNombre());
+	}
+
 	
 }
